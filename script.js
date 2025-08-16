@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -803,3 +804,21 @@ function showVideoModal(type, title, videos, description) {
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
+=======
+function filterProjects(category) {
+    const cards = document.querySelectorAll('.gallery .card');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    // update button active state
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category.includes(category)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+>>>>>>> ddf8a84 (updated project gallery and styles)
