@@ -838,4 +838,12 @@ function openVideoModal(videoUrl, title, description, codeLink) {
     }
     document.getElementById("modalLinks").innerHTML = linksHtml;
 }
+<<<<<<< HEAD
 >>>>>>> 67e9bef (Updated to pop up the videos)
+=======
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+    document.getElementById("modalBody").innerHTML = "";
+    document.getElementById("modalLinks").innerHTML = "";
+}
+>>>>>>> 6cef24c (Updated code for index and script)
