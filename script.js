@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -805,6 +806,21 @@ function showVideoModal(type, title, videos, description) {
     document.body.style.overflow = 'hidden';
 }
 =======
+=======
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+>>>>>>> 8db0d08 (Updated Code)
 function filterProjects(category) {
     const cards = document.querySelectorAll('.gallery .card');
     const buttons = document.querySelectorAll('.filter-btn');
@@ -822,8 +838,12 @@ function filterProjects(category) {
     });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ddf8a84 (updated project gallery and styles)
 =======
+=======
+
+>>>>>>> 8db0d08 (Updated Code)
 function openVideoModal(videoUrl, title, description, codeLink) {
     document.getElementById("projectModal").style.display = "block";
     document.getElementById("modalBody").innerHTML = `
@@ -839,11 +859,18 @@ function openVideoModal(videoUrl, title, description, codeLink) {
     document.getElementById("modalLinks").innerHTML = linksHtml;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 67e9bef (Updated to pop up the videos)
 =======
+=======
+
+>>>>>>> 8db0d08 (Updated Code)
 function closeModal() {
     document.getElementById("projectModal").style.display = "none";
     document.getElementById("modalBody").innerHTML = "";
     document.getElementById("modalLinks").innerHTML = "";
 }
+<<<<<<< HEAD
 >>>>>>> 6cef24c (Updated code for index and script)
+=======
+>>>>>>> 8db0d08 (Updated Code)

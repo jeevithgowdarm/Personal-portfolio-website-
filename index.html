@@ -147,20 +147,47 @@ oriented organization.</p>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEEVITHGOWDA R M - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <div id="particles-js"></div>
 
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">JEEVITHGOWDA R M</div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">Summary</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#internship" class="nav-link">Internship</a></li>
+            <li><a href="#courses" class="nav-link">Courses</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
 
-<header>
-    <h1>JEEVITHGOWDA R M</h1>
-    <p>Computer Science & Design Engineering Student | Aspiring Data Analystics and Data Visualization| Aspiring Full-Stack Developer</p>
-    <p>
-        <a href="mailto:jeevithjeeva12345@gmail.com">📧 Email</a> | 
-        <a href="tel:+917406012512">📞 Call</a> | 
-        <a href="https://github.com/jeevithgowdarm" target="_blank">💻 GitHub</a> | 
-        <a href="https://linkedin.com/in/jeevithgowda-r-m-33a022277" target="_blank">🔗 LinkedIn</a>
-    </p>
+<!-- Header with Profile Photo -->
+<header id="home">
+    <div class="header-content">
+        <div class="profile-container">
+            <img src="profile.jpg" alt="JEEVITHGOWDA R M" class="profile-photo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9IjEwMCIgZmlsbD0iIzAwN0JGRiIvPjx0ZXh0IHg9IjEwMCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSI0MCI+Skc8L3RleHQ+PC9zdmc+'">
+        </div>
+        <h1>JEEVITHGOWDA R M</h1>
+        <p class="tagline">Computer Science & Design Engineering Student | Aspiring Data Analyst & Full-Stack Developer</p>
+        <div class="header-links">
+            <a href="mailto:jeevithjeeva12345@gmail.com" class="header-link">📧 Email</a>
+            <a href="tel:+917406012512" class="header-link">📞 Call</a>
+            <a href="https://github.com/jeevithgowdarm" target="_blank" class="header-link">💻 GitHub</a>
+            <a href="https://linkedin.com/in/jeevithgowda-r-m-33a022277" target="_blank" class="header-link">🔗 LinkedIn</a>
+        </div>
+    </div>
 </header>
 
 <section id="about" class="fade-in">
@@ -197,6 +224,33 @@ oriented organization.</p>
     </ul>
 </section>
 
+<!-- COURSES SECTION -->
+<section id="courses" class="fade-in">
+    <h2><i class="fas fa-graduation-cap"></i> Courses & Certifications</h2>
+    <div class="courses-grid">
+        <div class="course-card">
+            <h3>Machine Learning Fundamentals</h3>
+            <p>LinkedIn Learning - 2023</p>
+            <p>Completed comprehensive course on ML algorithms and applications</p>
+        </div>
+        <div class="course-card">
+            <h3>Web Development Bootcamp</h3>
+            <p>Udemy - 2023</p>
+            <p>Full-stack development with HTML, CSS, JavaScript, and frameworks</p>
+        </div>
+        <div class="course-card">
+            <h3>Data Structures & Algorithms</h3>
+            <p>Coursera - 2022</p>
+            <p>Advanced algorithms and data structures implementation</p>
+        </div>
+        <div class="course-card">
+            <h3>Python for Data Science</h3>
+            <p>LinkedIn Learning - 2023</p>
+            <p>Data analysis and visualization with Python libraries</p>
+        </div>
+    </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects" class="fade-in">
     <h2><i class="fas fa-project-diagram"></i> Projects</h2>
@@ -213,48 +267,47 @@ oriented organization.</p>
     <div class="gallery">
 
         <div class="card" data-category="ai"
-             onclick="openvideoModal('https://your-live-demo-link.com/traffic',
+             onclick="openVideoModal('https://your-live-demo-link.com/traffic',
              'AI-Based Traffic Management System', 
              'Used LSTM & YOLOv5 for congestion prediction & emergency vehicle detection. Reduced congestion by 30% in simulations.', 
               'https://github.com/jeevithgowdarm/traffic-management')">
-            <img src="traffic.jpg" alt="AI Traffic Management">
+            <img src="project_images/placeholder.jpg" alt="AI Traffic Management" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjNzc3IiBmb250LXNpemU9IjE4Ij5BSSBUcmFmZmljIE1nbXQ8L3RleHQ+PC9zdmc+'">
             <h3>AI-Based Traffic Management</h3>
         </div>
 
         <div class="card" data-category="cyber"
-             onclick="openvideoModal('https://drive.google.com/file/d/19k4djVkatjtYwYWnlKphUEiR3qjIgkow/view?usp=sharing', 
-             'Phish Shield - Detection of Link wheather Safe/Fake', 
-             'This project explains phishing attack detection with AI',
-             'Built using Python, with Streamlit for the user interface, Scikit-learn (Random Forest) for phishing URL detection, and libraries like Pandas, NumPy, and tldextract for data processing and feature extraction. Managed version control with Git/GitHub. ', 
+             onclick="openVideoModal('https://drive.google.com/file/d/19k4djVkatjtYwYWnlKphUEiR3qjIgkow/view?usp=sharing', 
+             'Phish Shield - Detection of Safe/Fake Links', 
+             'AI-powered phishing detection system using Random Forest algorithm. Built with Python, Streamlit, Scikit-learn, Pandas, and NumPy for URL analysis and feature extraction.',
              'https://github.com/jeevithgowdarm/phish_shield.git')">
-            <img src="C:\Users\JEEVITH GOWDA R M\OneDrive\Desktop\portfolio\project_images\phishing_detection_image\Screenshot (343).png.jpg" alt="Detection of Safe/Fake Link">
+            <img src="project_images/phishing_detection_image/Screenshot (343).png" alt="Phish Shield Detection" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjNzc3IiBmb250LXNpemU9IjE2Ij5QaGlzaCBTaGllbGQ8L3RleHQ+PC9zdmc+'">
             <h3>Cyber-Related Phish_Shield</h3>
         </div>
 
         <div class="card" data-category="cloud"
              onclick="openVideoModal('https://your-live-demo-link.com/resume-builder',  
              'Cloud-Based Resume Builder', 
-             'Created an online resume generation platform with cloud storage for easy access.', 
+             'Created an online resume generation platform with cloud storage for easy access and professional document creation.', 
              'https://github.com/jeevithgowdarm/resume-builder')">
-            <img src="resume-builder.jpg" alt="Cloud Resume Builder">
+            <img src="project_images/placeholder.jpg" alt="Cloud Resume Builder" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjNzc3IiBmb250LXNpemU9IjE2Ij5SZXN1bWUgQnVpbGRlcjwvdGV4dD48L3N2Zz4='">
             <h3>Cloud-Based Resume Builder</h3>
         </div>
 
         <div class="card" data-category="ai web"
              onclick="openVideoModal('https://your-live-demo-link.com/car-price', 
              'Car Price Prediction', 
-             'AI-powered web app predicting car prices with high accuracy. Built during Ediglobe internship.', 
+             'AI-powered web application for predicting car prices with high accuracy. Built during Ediglobe internship using machine learning algorithms.', 
              'https://github.com/jeevithgowdarm/car-price-prediction')">
-            <img src="car-price.jpg" alt="Car Price Prediction">
+            <img src="project_images/placeholder.jpg" alt="Car Price Prediction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjNzc3IiBmb250LXNpemU9IjE2Ij5DYXIgUHJpY2UgUHJlZGljdGlvbjwvdGV4dD48L3N2Zz4='">
             <h3>Car Price Prediction</h3>
         </div>
 
         <div class="card" data-category="web ai"
              onclick="openVideoModal('https://your-live-demo-link.com/interior-design', 
              'Interior Design Web App', 
-             'ML-powered design visualization tool for architects & interior designers.', 
+             'Machine learning-powered design visualization tool for architects and interior designers with real-time rendering capabilities.', 
              'https://github.com/jeevithgowdarm/interior-design-app')">
-            <img src="interior-design.jpg" alt="Interior Design">
+            <img src="project_images/placeholder.jpg" alt="Interior Design" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjNzc3IiBmb250LXNpemU9IjE2Ij5JbnRlcmlvciBEZXNpZ248L3RleHQ+PC9zdmc+'">
             <h3>Interior Design Web App</h3>
         </div>
 
