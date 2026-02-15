@@ -871,6 +871,103 @@ function closeModal() {
     document.getElementById("modalLinks").innerHTML = "";
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 6cef24c (Updated code for index and script)
 =======
 >>>>>>> 8db0d08 (Updated Code)
+=======
+
+// Intersection Observer for section animations
+const sections = document.querySelectorAll('.section');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(section => sectionObserver.observe(section));
+
+// Modal functionality
+function viewProjectPhotos(projectId) {
+    const modal = document.getElementById('photoModal');
+    const container = modal.querySelector('.photo-container');
+    modal.style.display = 'block';
+    setTimeout(() => modal.classList.add('active'), 10);
+
+    // Load project photos based on projectId
+    const photos = getProjectPhotos(projectId);
+    container.innerHTML = photos.map(photo => 
+        `<img src="${photo}" alt="Project Photo" style="width: 100%; margin-bottom: 10px;">`
+    ).join('');
+}
+
+function viewProjectVideo(projectId) {
+    const modal = document.getElementById('videoModal');
+    const container = modal.querySelector('.video-container');
+    modal.style.display = 'block';
+    setTimeout(() => modal.classList.add('active'), 10);
+
+    // Load project video based on projectId
+    const videoSrc = getProjectVideo(projectId);
+    container.innerHTML = `<video controls style="width: 100%;"><source src="${videoSrc}" type="video/mp4"></video>`;
+}
+
+// Helper functions to get project media
+function getProjectPhotos(projectId) {
+    // Replace with actual project photo paths
+    return [`project_images/${projectId}.jpg`];
+}
+
+function getProjectVideo(projectId) {
+    // Replace with actual project video path
+    return `Project_videos/${projectId}.mp4`;
+}
+
+// Close modal functionality
+document.querySelectorAll('.close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+        const modal = closeBtn.closest('.modal');
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            // Clear container content
+            modal.querySelector('.photo-container, .video-container').innerHTML = '';
+        }, 300);
+    });
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const targetPosition = targetElement.offsetTop - navHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Add scroll class to nav
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) {
+        nav.style.background = 'rgba(0, 0, 0, 0.95)';
+    } else {
+        nav.style.background = 'rgba(0, 0, 0, 0.8)';
+    }
+});
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Trigger initial section visibility check
+    sections.forEach(section => sectionObserver.observe(section));
+});
+>>>>>>> 6889686 (Updated Resume)
